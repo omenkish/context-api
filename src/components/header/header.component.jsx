@@ -10,11 +10,14 @@ import { selectShowCart } from '../../redux/cart/cart.selectors';
 import { ReactComponent as Logo } from '../../assets//images/crown.svg';
 import { auth } from '../../firebase/firebase.utils';
 import CurrentUserContext from '../../contexts/current-user/current-user.context';
+import { CartContext } from '../../providers/cart/cart.provider';
 
 import './header.styles.scss';
 
-const Header =  ({ showCart }) => {
+const Header =  () => {
   const currentUser = useContext(CurrentUserContext);
+  const { showCart } = useContext(CartContext);
+
   return (
     <div className="header">
       <Link className="logo-container" to="/">
