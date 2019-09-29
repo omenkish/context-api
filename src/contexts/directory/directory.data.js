@@ -1,5 +1,4 @@
-const INITIAL_STATE = {
-  sections: [
+export default [
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hatss.png',
@@ -32,12 +31,4 @@ const INITIAL_STATE = {
       id: 5,
       linkUrl: 'shop/mens',
     },
-  ],
-};
-
-export default (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+  ];
